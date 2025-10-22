@@ -24,7 +24,7 @@ All results are displayed in a **modern bilingual (Arabic/French)** interface po
 My-Arabic-NLP-Server
 ┣ 📂 src
 ┃ ┣ 📂 MainPackNLP
-┃ ┃ ┣ SAFARModernUI.java        → Main Swing interface
+┃ ┃ ┣ MainDashboardUI.java      → Main Swing interface
 ┃ ┃ ┣ MapGenerator.java         → JSON generation logic
 ┃ ┃ ┣ FileBrowserUI.java        → Custom file browser
 ┃ ┗ 📂 data
