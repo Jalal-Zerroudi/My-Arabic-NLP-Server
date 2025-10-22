@@ -1,0 +1,2230 @@
+[
+  {
+    "class": "safar.basic.syntax.parser.interfaces.IParser",
+    "methods": [
+      "public abstract void parse(String, File, String)",
+      "public abstract void parse(String[], File, String)",
+      "public abstract void parse(File, File, String)",
+      "public abstract void parse(File, File, String, String)",
+      "public abstract SentenceParsingAnalysis parse(String)",
+      "public abstract List parse(String[])",
+      "public abstract List parse(File)",
+      "public abstract List parse(File, String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.particle.util.Constantes",
+    "methods": []
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.interfaces.ISeparatedPronounService",
+    "methods": [
+      "public abstract List getSeparatedPronounsList()",
+      "public abstract MorphPptes getMorphPptesByVoweledForm(String)",
+      "public abstract boolean isSeparatedPronounForGender(String, String)",
+      "public abstract boolean isSeparatedPronounForMorhpoSyntCas(String, String)",
+      "public abstract SeparatedPronoun getSeparatedPronounByUnvoweledForm(String)",
+      "public abstract List getSeparatedPronounsByGender(String)",
+      "public abstract boolean isSeparatedPronounForNumber(String, String)",
+      "public abstract boolean isSeparatedPronounForPerson(String, String)",
+      "public abstract SeparatedPronoun getSeparatedPronounByVoweledForm(String)",
+      "public abstract List getSeparatedPronounsByMorphPptes(MorphPptes)",
+      "public abstract List getSeparatedPronounsByNumber(String)",
+      "public abstract List getSeparatedPronounsByPerson(String)",
+      "public abstract boolean isSeparatedPronounForMorphPptes(String, MorphPptes)",
+      "public abstract MorphPptes getMorphPptesByUnvoweledForm(String)",
+      "public abstract List giveDual(String)",
+      "public abstract List givePlural(String)",
+      "public abstract List getSeparatedPronounsByMorhpoSyntCas(String)",
+      "public abstract List giveMasculin(String)",
+      "public abstract List giveSingular(String)",
+      "public abstract List giveFeminin(String)",
+      "public abstract boolean isSeparatedPronoun(String)"
+    ]
+  },
+  {
+    "class": "safar.util.splitting.factory.SentenceSplitterFactory",
+    "methods": [
+      "public static ISentenceSplitter getImplementation(String)",
+      "public static ISentenceSplitter getSAFARSentenceSplitterImplementation()"
+    ]
+  },
+  {
+    "class": "safar.basic.syntax.parser.model.Tree",
+    "methods": [
+      "public final ArrayList getSubTrees()",
+      "public final ArrayList getSubLeafs()",
+      "public final void removeAllSubLeafs()",
+      "public final void removeSubTree(Tree)",
+      "public final void setSubTrees(ArrayList)",
+      "public final void printSimpleTree()",
+      "public final void printChunks()",
+      "public final void setSubLeafs(ArrayList)",
+      "public final void removeAllSubTrees()",
+      "public final void printXMLTree()",
+      "public final void removeSubLeaf(Leaf)",
+      "private void getLeafByNumber(Tree, int)",
+      "public final Leaf getLeafByNumber(int)",
+      "public final void addSubTree(Tree)",
+      "public final void addSubLeaf(Leaf)"
+    ]
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.MorphoSyntacticProcessor$5",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.model.Particles",
+    "methods": [
+      "public final List getParticles()",
+      "public final void addParticle(Particle)",
+      "public final void setParticles(ArrayList)"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.analyzer.model.ParticleMorphologyAnalysis",
+    "methods": [
+      "public final String getPos()",
+      "public final void setPos(String)",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.application.stemcounter.StemCounter$4",
+    "methods": [
+      "public boolean isCellEditable(int, int)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.interfaces.ISpecialVerbService",
+    "methods": [
+      "public abstract List getSpecialVerbsByMorphoDesc(String)",
+      "public abstract SpecialVerb getSpecialVerbByInfinitiveUnvoweledForm(String)",
+      "public abstract SpecialVerb getSpecialVerbByInfinitiveVoweledForm(String)",
+      "public abstract String getInfinitiveUnvoweledFormByInfinitiveVoweledForm(String)",
+      "public abstract String getInfinitiveVoweledFormByInfinitiveUnvoweledForm(String)",
+      "public abstract boolean isSpecialVerb(String)",
+      "public abstract List getSpecialVerbsBySyntDesc(String)",
+      "public abstract List getSpecialVerbsList()",
+      "public abstract boolean isSpecialVerbForSyntClass(String, SyntClass)",
+      "public abstract boolean isSpecialVerbForMorhpoDesc(String, String)",
+      "public abstract List getSpecialVerbsByPattern(String)",
+      "public abstract List getSpecialVerbsByRoot(String)"
+    ]
+  },
+  {
+    "class": "safar.basic.syntax.parser.model.Leaf",
+    "methods": [
+      "public final void setNumber(int)",
+      "public final String getValue()",
+      "public final void setValue(String)",
+      "public final int getNumber()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.ConnectedNoun",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledform()",
+      "public final void setVoweledform(String)",
+      "public final void setUnvoweledform(String)",
+      "public final void setSample(String)",
+      "public final String getSample()",
+      "public final void setSprop(String)",
+      "public final String getSprop()",
+      "public final void setRef(String)",
+      "public final CMorphPptes getMorphPptes()",
+      "public final void setMorphPptes(CMorphPptes)",
+      "public final void addMorphPptes(CMorphPptes)",
+      "public final String toString()",
+      "public final String getRef()"
+    ]
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.MorphoSyntacticProcessor$4",
+    "methods": [
+      "public boolean isCellEditable(int, int)"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_tafaoli.SForm$3",
+    "methods": [
+      "public void mouseClicked(MouseEvent)"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_moaassir.SForm",
+    "methods": [
+      "static void access$000(SForm, MouseEvent)",
+      "static void access$300(SForm, MouseEvent)",
+      "private void jMenu2MouseClicked(MouseEvent)",
+      "private void initComponents()",
+      "private void jMenu1MouseClicked(MouseEvent)",
+      "private void jMenu3MouseClicked(MouseEvent)",
+      "static void access$200(SForm, MouseEvent)",
+      "static void access$100(SForm, ActionEvent)",
+      "static void access$400(SForm, MouseEvent)",
+      "private void jButton2ActionPerformed(ActionEvent)",
+      "private void jButton2MouseClicked(MouseEvent)",
+      "public static void main(String[])"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.affixes.model.SinglePrefix",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledform()",
+      "public final void setVoweledform(String)",
+      "public final void setUnvoweledform(String)",
+      "public final void setDesc(String)",
+      "public final void setSample(String)",
+      "public final String getSample()",
+      "public final String getName()",
+      "public final String toString()",
+      "public final void setName(String)",
+      "public final String getDesc()"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_tafaoli.ProgressBar$Task",
+    "methods": [
+      "public volatile Object doInBackground()",
+      "public Void doInBackground()",
+      "public void done()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.model.Translit",
+    "methods": [
+      "public String getBuckwalter()",
+      "public void setBuckwalter(String)",
+      "public void setWiki(String)",
+      "public String getWiki()",
+      "public String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.interfaces.IVerbService",
+    "methods": [
+      "public abstract List getVerbsByRoot(String)",
+      "public abstract boolean isVerb(String)",
+      "public abstract boolean isVerbRoot(String)",
+      "public abstract List getVerbs()",
+      "public abstract Verb getVerbByVoweledForm(String)",
+      "public abstract List getVerbsByUnvoweledForm(String)"
+    ]
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.ContextMenuMouseListener$4",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.ConnectedNouns",
+    "methods": [
+      "public final List getConnectedNouns()",
+      "public final void setConnectedNouns(ArrayList)",
+      "public final void addConnectedNoun(ConnectedNoun)"
+    ]
+  },
+  {
+    "class": "safar.basic.syntax.parser.util.PrintParserResults",
+    "methods": [
+      "private static StringBuffer printTab()",
+      "public static String getDependenciesAsString(OneParsingAnalysis)",
+      "public static String getXMLTreeWithDependenciesAsString(OneParsingAnalysis)",
+      "private static void saveXMLTreeWithDependencies(Tree, ArrayList)",
+      "private static void saveXMLTree(Tree)",
+      "public static String getTreeAsString(Tree)",
+      "public static String getXMLTreeAsString(Tree)",
+      "private static void saveDependencies(OneParsingAnalysis)",
+      "public static String getChunksAsString(Tree)",
+      "private static void saveTree(Tree)",
+      "private static void saveChunks(Tree)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.factory.SpecialVerbsFactory",
+    "methods": [
+      "public static ISpecialVerbService getSpecialVerbImplementation()",
+      "public static IConjService getConjImplementation()",
+      "public static IPPsService getPPsImplementation()",
+      "public static IConjSuffService getConjSuffImplementation()"
+    ]
+  },
+  {
+    "class": "safar.application.stemcounter.StemCounter$3",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.model.Vowels",
+    "methods": [
+      "public void addVowel(Vowel)",
+      "public List getVowels()",
+      "public void setVowels(List)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.model.SyntClass",
+    "methods": [
+      "public final void setSample(String)",
+      "public final String getSample()",
+      "public final void setRef(String)",
+      "public final String getSyntDesc()",
+      "public final String getSyntProp()",
+      "public final void setSyntProp(String)",
+      "public final void setSyntDesc(String)",
+      "public final String toString()",
+      "public final String getRef()"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.analyzer.model.Suffix",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledForm()",
+      "public final List getSuffixItemList()",
+      "public final void setVoweledForm(String)",
+      "public final void setUnvoweledForm(String)",
+      "public final void setSuffixItemList(List)",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.affixes.model.Suffix",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledform()",
+      "public final void setType(String)",
+      "public final void setVoweledform(String)",
+      "public final List getSingleSuffixes()",
+      "public final void setUnvoweledform(String)",
+      "public final void setSingleSuffixes(ArrayList)",
+      "public final void addSingleSuffix(SingleSuffix)",
+      "public final String toString()",
+      "public final String getType()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.model.PersonalPronouns",
+    "methods": [
+      "public final void addPersonalPronoun(PP)",
+      "public final ArrayList getPersonalPronouns()",
+      "public final void setPersonalPronouns(ArrayList)"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.SummarizerHespress",
+    "methods": [
+      "private static String[][] SortSentenceScore(Map, int)",
+      "private static Map countFreq(List)",
+      "public static void main(String[])",
+      "private static void print(String[][])",
+      "private static void save(String[][], File)"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_tafaoli.SForm$6",
+    "methods": [
+      "public void run()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.SignalNouns",
+    "methods": [
+      "public final void addSignalNoun(SignalNoun)",
+      "public final void setSignalNouns(ArrayList)",
+      "public final List getSignalNouns()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.model.ConjSuffix",
+    "methods": [
+      "public final List getConjSuffix()",
+      "public final void setConjSuffix(ArrayList)",
+      "public final void addConjSuff(ConjSuff)"
+    ]
+  },
+  {
+    "class": "safar.basic.syntax.parser.model.ParsedElement",
+    "methods": [
+      "public final String getCategory()",
+      "public final void setCategory(String)",
+      "public final int getIndex()",
+      "public final void setIndex(int)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.model.Punctuation",
+    "methods": [
+      "public Description getDescription()",
+      "public Translit getTranslit()",
+      "public void setTranslit(Translit)",
+      "public void setDescription(Description)",
+      "public String getDisplay()",
+      "public void setDisplay(String)",
+      "public void setCode(Code)",
+      "public Code getCode()",
+      "public String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.affixes.interfaces.IPrefixService",
+    "methods": [
+      "public abstract List getPrefix(String)",
+      "public abstract List getPrefixesByType(String)",
+      "public abstract boolean isPrefixForType(String, String)",
+      "public abstract List getSinglePrefixes()",
+      "public abstract List getPrefixes(String, String)",
+      "public abstract List getPrefixes(String)",
+      "public abstract boolean isSinglePrefix(String)",
+      "public abstract List getAllPrefixes()",
+      "public abstract boolean isPrefix(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.model.Radical",
+    "methods": [
+      "public final String getVoweledForm()",
+      "public final void setVoweledForm(String)",
+      "public final String getPreVow()",
+      "public final String getTenses()",
+      "public final void setTenses(String)",
+      "public final void setPreVow(String)",
+      "public final String getConjSuffix()",
+      "public final void setUnVoweledForm(String)",
+      "public final void setConjSuffix(String)",
+      "public final String getUnVoweledForm()",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.application.stemcounter.ContextMenuMouseListener$1",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.contemporary.factory.ContemporaryDictFactory",
+    "methods": [
+      "public static ILexiconService getContemporaryImplementation()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.affixes.util.Configuration",
+    "methods": [
+      "public static void main(String[])",
+      "public static String getProperty(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.interfaces.INounService",
+    "methods": [
+      "public abstract List getNounsByRoot(String)",
+      "public abstract boolean isNounRoot(String)",
+      "public abstract boolean isNoun(String)",
+      "public abstract List getNouns()",
+      "public abstract List getPlurals(String)",
+      "public abstract boolean isPlural(String)",
+      "public abstract boolean isSingular(String)",
+      "public abstract List getNounsByUnvoweledForm(String)",
+      "public abstract Noun getNounByVoweledForm(String)"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.ContextMenuMouseListener",
+    "methods": [
+      "static JTextComponent access$000(ContextMenuMouseListener)",
+      "public void mouseClicked(MouseEvent)",
+      "static String access$100(ContextMenuMouseListener)",
+      "static Actions access$202(ContextMenuMouseListener, Actions)",
+      "static String access$102(ContextMenuMouseListener, String)"
+    ]
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.MorphoSyntacticProcessor$2",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_tafaoli.ProgressBar$1",
+    "methods": [
+      "public void run()"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.ContextMenuMouseListener$Actions",
+    "methods": [
+      "public static Actions[] values()",
+      "public static Actions valueOf(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.contemporary.model.Lexicon",
+    "methods": [
+      "public final void addLexicalEntry(LexicalEntry)",
+      "public final List getLexicon()",
+      "public final void setLexicon(List)"
+    ]
+  },
+  {
+    "class": "safar.util.benchmark.morphology.stemmer.StemmerMetrics",
+    "methods": [
+      "public void setTotalStemmerWordsNotChanged(int)",
+      "public int getTotalStemmerWordsNotChanged()",
+      "public double getWcc()",
+      "public void setWcc(double)",
+      "public double getIcf()",
+      "public void setIcf(double)",
+      "public double getWca()",
+      "public void setWca(double)",
+      "public double getArc()",
+      "public void setArc(double)",
+      "public double getPrecision()",
+      "public void setPrecision(double)",
+      "public void calculate_metrics()",
+      "public int getTotalCorpusWords()",
+      "public String getImplemantationName()",
+      "public void setTotalCorpusWords(int)",
+      "public void setImplemantationName(String)",
+      "public int getTotalStemmerWords()",
+      "public int getTotalRemovedCharacters()",
+      "public int getTotalStemmerUniqueStems()",
+      "public void setTotalStemmerWords(int)",
+      "public int getTotalIncorrectStems()",
+      "public void setTotalCorrectStems(int)",
+      "public void setTotalStemmerUniqueStems(int)",
+      "public void setTotalRemovedCharacters(int)",
+      "public void setTotalIncorrectStems(int)",
+      "public int getTotalCorrectStems()"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.stemmer.impl.ISRIStemmer",
+    "methods": [
+      "public final void stem(String, File)",
+      "public final void stem(File, File, String, String)",
+      "public final void stem(File, File)",
+      "public final void stem(File, File, String)",
+      "public final void stem(String, File, String)",
+      "public final List stem(String)",
+      "public final List stem(File)",
+      "public final List stem(File, String)",
+      "private List stemFile(File, String)"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.analyzer.model.PrefixItem",
+    "methods": [
+      "public final String getClazz()",
+      "public final void setClazz(String)",
+      "public final String toString()",
+      "public final String getEntry()",
+      "public final void setEntry(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.model.MorphPptes",
+    "methods": [
+      "public final String getPattern()",
+      "public final void setRoot(String)",
+      "public final void setPattern(String)",
+      "public final void setDesc(String)",
+      "public final String toString()",
+      "public final String getRoot()",
+      "public final String getDesc()"
+    ]
+  },
+  {
+    "class": "safar.util.remover.Remover",
+    "methods": [
+      "public static String removeStopWords(String)",
+      "public static String removeDiacritics(String)"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.stemmer.python_src.FileLoader",
+    "methods": []
+  },
+  {
+    "class": "safar.basic.morphology.analyzer.model.Prefix",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledForm()",
+      "public final List getPrefixItemList()",
+      "public final void setVoweledForm(String)",
+      "public final void setPrefixItemList(List)",
+      "public final void setUnvoweledForm(String)",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.application.sentenceprocessor.SentenceProcessor",
+    "methods": [
+      "private static void saveArrayOfSentencesAsFile(String[])",
+      "public static void main(String[])"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.MClass",
+    "methods": [
+      "public final String getMdesc()",
+      "public final void setMdesc(String)",
+      "public final void addComplement(Complement)",
+      "public final List getComplements()",
+      "public final void setComplements(ArrayList)",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.model.Noun",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledform()",
+      "public final List getMeanings()",
+      "public final void addMeaning(Meaning)",
+      "public final List getPlurals()",
+      "public final String getPattern()",
+      "public final String getGender()",
+      "public final void setType(String)",
+      "public final void addPlural(Plural)",
+      "public final void setGender(String)",
+      "public final void setNumber(String)",
+      "public final void setRoot(String)",
+      "public final void setPattern(String)",
+      "public final void setVoweledform(String)",
+      "public final void setUnvoweledform(String)",
+      "public final void setMeanings(ArrayList)",
+      "public final void setOrigine(String)",
+      "public final String getOrigine()",
+      "public final void setPlurals(ArrayList)",
+      "public final String toString()",
+      "public final String getRoot()",
+      "public final String getType()",
+      "public final String getNumber()"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_tafaoli.SForm",
+    "methods": [
+      "static void access$000(SForm, MouseEvent)",
+      "static void access$300(SForm, MouseEvent)",
+      "private void jMenu2MouseClicked(MouseEvent)",
+      "private void initComponents()",
+      "private void jMenu1MouseClicked(MouseEvent)",
+      "private void jMenu3MouseClicked(MouseEvent)",
+      "static void access$200(SForm, MouseEvent)",
+      "static void access$100(SForm, ActionEvent)",
+      "static void access$400(SForm, MouseEvent)",
+      "private void jButton2ActionPerformed(ActionEvent)",
+      "private void jButton2MouseClicked(MouseEvent)",
+      "public static void main(String[])"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.NounParticle",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledform()",
+      "public final void setVoweledform(String)",
+      "public final void setUnvoweledform(String)",
+      "public final void addMClass(MClass)",
+      "public final void setMClasses(ArrayList)",
+      "public final List getMClasses()",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.interfaces.IConjSuffService",
+    "methods": [
+      "public abstract List getConjSuffixesList()",
+      "public abstract ConjSuff getConjSuffixesByClassName(String)"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.analyzer.model.WordMorphologyAnalysis",
+    "methods": [
+      "public final List getStandardAnalysisList()",
+      "public final void setNormalizedWord(String)",
+      "public final String getNormalizedWord()",
+      "public final void setStandardAnalysisList(List)",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.model.Particle",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledform()",
+      "public final List getMeanings()",
+      "public final void addMeaning(Meaning)",
+      "public final void setType(String)",
+      "public final void setRoot(String)",
+      "public final void setVoweledform(String)",
+      "public final void setUnvoweledform(String)",
+      "public final void setMeanings(ArrayList)",
+      "public final String toString()",
+      "public final String getRoot()",
+      "public final String getType()"
+    ]
+  },
+  {
+    "class": "safar.util.tokenization.interfaces.ITokenizer",
+    "methods": [
+      "public abstract void tokenize(String, File)",
+      "public abstract void tokenize(String, File, boolean, String)",
+      "public abstract void tokenize(File, File)",
+      "public abstract void tokenize(File, File, String, boolean, String)",
+      "public abstract String[] tokenize(String)",
+      "public abstract String[] tokenize(String, boolean)",
+      "public abstract String[] tokenize(File)",
+      "public abstract String[] tokenize(File, String, boolean)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.NounsParticles",
+    "methods": [
+      "public final List getParticles()",
+      "public final void addParticle(NounParticle)",
+      "public final void setParticles(ArrayList)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.model.Plural",
+    "methods": [
+      "public final String getLabel()",
+      "public final void setLabel(String)",
+      "public final void setType(String)",
+      "public final String toString()",
+      "public final String getType()"
+    ]
+  },
+  {
+    "class": "safar.application.stemcounter.ContextMenuMouseListener$3",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.ContextMenuMouseListener$5",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.SummarizerFrame$2",
+    "methods": [
+      "public void run()"
+    ]
+  },
+  {
+    "class": "safar.application.stemcounter.StemCounter$2",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.factory.AlphabetFactory",
+    "methods": [
+      "public static IAlphabetService getAlphabetImplementation()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.SeparatedPronouns",
+    "methods": [
+      "public final List getSeparatedPronouns()",
+      "public final void addSeparatedPronoun(SeparatedPronoun)",
+      "public final void setSeparatedPronouns(ArrayList)"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.analyzer.interfaces.IMorphologyAnalyzer",
+    "methods": [
+      "public abstract void analyze(String, File, String)",
+      "public abstract void analyze(File, File)",
+      "public abstract void analyze(File, File, String)",
+      "public abstract void analyze(File, File, String, String)",
+      "public abstract List analyze(String)",
+      "public abstract List analyze(File)",
+      "public abstract List analyze(File, String)",
+      "public abstract void analyze(String, File)"
+    ]
+  },
+  {
+    "class": "safar.util.tokenization.factory.TokenizerFactory",
+    "methods": [
+      "public static ITokenizer getSAFARTokenizerImplementation()",
+      "public static ITokenizer getImplementation(String)"
+    ]
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.ContextMenuMouseListener$Actions",
+    "methods": [
+      "public static Actions[] values()",
+      "public static Actions valueOf(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.model.Display",
+    "methods": [
+      "public String getIsolated()",
+      "public String getBeginning()",
+      "public void setIsolated(String)",
+      "public void setBeginning(String)",
+      "public String getMiddle()",
+      "public String getEnd()",
+      "public void setMiddle(String)",
+      "public void setEnd(String)",
+      "public String toString()"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.ContextMenuMouseListener$1",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.SummarizerFrame$1",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.stemmer.factory.StemmerFactory",
+    "methods": [
+      "public static IStemmer getImplementation(String)",
+      "public static IStemmer getLight10Implementation()",
+      "public static IStemmer getKhojaImplementation()",
+      "public static IStemmer getISRIImplementation()",
+      "public static IStemmer getMotazImplementation()",
+      "public static IStemmer getTashaphyneImplementation()"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_tafaoli.ProgressBar",
+    "methods": [
+      "static JButton access$000(ProgressBar)",
+      "public void actionPerformed(ActionEvent)",
+      "private static void createAndShowGUI()",
+      "public void propertyChange(PropertyChangeEvent)",
+      "static void access$200()",
+      "static JFrame access$100()",
+      "public static void main(String[])"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.model.Alphabet",
+    "methods": [
+      "public Punctuations getPunctuations()",
+      "public void setPunctuations(Punctuations)",
+      "public Letters getLetters()",
+      "public Vowels getVowels()",
+      "public void setLetters(Letters)",
+      "public void setVowels(Vowels)"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.ContextMenuMouseListener$2",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.SeparatedPronoun",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledform()",
+      "public final void setVoweledform(String)",
+      "public final void setUnvoweledform(String)",
+      "public final void setSample(String)",
+      "public final String getSample()",
+      "public final void setSprop(String)",
+      "public final String getSprop()",
+      "public final void setRef(String)",
+      "public final MorphPptes getMorphPptes()",
+      "public final void setMorphPptes(MorphPptes)",
+      "public final void addMorphPptes(MorphPptes)",
+      "public final String toString()",
+      "public final String getRef()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.contemporary.util.Constantes",
+    "methods": []
+  },
+  {
+    "class": "safar.resources.lexicon.affixes.model.Clitic",
+    "methods": [
+      "public final Suffix getSuffix()",
+      "public final Prefix getPrefix()",
+      "public final void setSuffix(Suffix)",
+      "public final void setPrefix(Prefix)",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.affixes.model.SingleSuffix",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledform()",
+      "public final String getGender()",
+      "public final void setGender(String)",
+      "public final void setNumber(String)",
+      "public final void setVoweledform(String)",
+      "public final void setUnvoweledform(String)",
+      "public final void setPerson(String)",
+      "public final void setDesc(String)",
+      "public final void setSample(String)",
+      "public final String getPerson()",
+      "public final String getSample()",
+      "public final String getName()",
+      "public final String toString()",
+      "public final void setName(String)",
+      "public final String getNumber()",
+      "public final String getDesc()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.interfaces.IAlphabetService",
+    "methods": [
+      "public abstract Letter getLetterByDescription(String, int)",
+      "public abstract Letter getLetterByBeginDisplay(String)",
+      "public abstract Letter getLetterByBwTranslit(String)",
+      "public abstract Vowel getVowelByDescription(String, int)",
+      "public abstract Punctuation getPunctuationByCode(String, int)",
+      "public abstract Vowel getVowelByWikiTranslit(String)",
+      "public abstract Vowel getVowelByBwTranslit(String)",
+      "public abstract Letter getLetterByTranslit(String, int)",
+      "public abstract String getDisplayByUnicode(String)",
+      "public abstract Letter getLetterByIsolatedDisplay(String)",
+      "public abstract Letter getLetterByEndDisplay(String)",
+      "public abstract Punctuation getPunctuationByDesc(String, int)",
+      "public abstract Letter getLetterByMiddleDisplay(String)",
+      "public abstract Punctuation getPunctuationByArabicDesc(String)",
+      "public abstract Punctuation getPunctuationByUnicode(String)",
+      "public abstract Letter getLetterByEnglishDesc(String)",
+      "public abstract Letter getLetterByWikiTranslit(String)",
+      "public abstract Punctuation getPunctuationByDisplay(String)",
+      "public abstract Vowel getVowelByArabicDesc(String)",
+      "public abstract Vowel getVowelByEnglishDesc(String)",
+      "public abstract Letter getLetterByArabicDesc(String)",
+      "public abstract Punctuation getPunctuationByEnglishDesc(String)",
+      "public abstract Letter getLetterByCode(String, int)",
+      "public abstract Letter getLetterByUnicode(String)",
+      "public abstract Vowel getVowelByDisplay(String)",
+      "public abstract Vowel getVowelByUnicode(String)",
+      "public abstract Letter getLetterByDisplay(String, int)",
+      "public abstract Vowel getVowelByCode(String, int)",
+      "public abstract Vowel getVowelByTranslit(String, int)",
+      "public abstract List getPunctuations()",
+      "public abstract List getLetters()",
+      "public abstract List getVowels()",
+      "public abstract String toXML(Object)"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_moaassir.SForm$4",
+    "methods": [
+      "public void mouseClicked(MouseEvent)"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.stemmer.model.WordStemmerAnalysis",
+    "methods": [
+      "public final String getWord()",
+      "public final void setWord(String)",
+      "public final List getListStemmerAnalysis()",
+      "public final void setListStemmerAnalysis(List)",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.model.Item",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledform()",
+      "public final void setVoweledform(String)",
+      "public final void setUnvoweledform(String)",
+      "public final void setPPId(String)",
+      "public final String getPPId()",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.model.Description",
+    "methods": [
+      "public String getArabic()",
+      "public void setEnglish(String)",
+      "public void setArabic(String)",
+      "public String getEnglish()",
+      "public String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.model.Code",
+    "methods": [
+      "public void setUnicode_isolated(String)",
+      "public String getUnicode_beginning()",
+      "public String getUnicode_isolated()",
+      "public void setUnicode_beginning(String)",
+      "public String getUnicode_end()",
+      "public String getUnicode_middle()",
+      "public void setUnicode_end(String)",
+      "public void setUnicode_middle(String)",
+      "public void setUnicode(String)",
+      "public String getUnicode()",
+      "public String toString()"
+    ]
+  },
+  {
+    "class": "safar.application.stemcounter.ContextMenuMouseListener",
+    "methods": [
+      "static JTextComponent access$000(ContextMenuMouseListener)",
+      "public void mouseClicked(MouseEvent)",
+      "static String access$100(ContextMenuMouseListener)",
+      "static Actions access$202(ContextMenuMouseListener, Actions)",
+      "static String access$102(ContextMenuMouseListener, String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.model.SpecialVerb",
+    "methods": [
+      "public final void addRadical(Radical)",
+      "public final void setRadical(ArrayList)",
+      "public final MorphPptes getMorphPptes()",
+      "public final void setMorphPptes(MorphPptes)",
+      "public final ArrayList getSyntClasses()",
+      "public final String getInfinitiveUF()",
+      "public final void addMorphPptes(MorphPptes)",
+      "public final ArrayList getRadicals()",
+      "public final String getInfinitiveVF()",
+      "public final void setSyntClasses(ArrayList)",
+      "public final void setInfinitiveVF(String)",
+      "public final void addSyntClass(SyntClass)",
+      "public final void setInfinitiveUF(String)",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.model.Verbs",
+    "methods": [
+      "public final List getVerbs()",
+      "public final void addVerb(Verb)",
+      "public final void setVerbs(ArrayList)"
+    ]
+  },
+  {
+    "class": "safar.util.normalization.factory.NormalizerFactory",
+    "methods": [
+      "public static INormalizer getImplementation(String)",
+      "public static INormalizer getSAFARNormalizerImplementation()"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_moaassir.SForm$6",
+    "methods": [
+      "public void run()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.affixes.util.Configuration$1",
+    "methods": []
+  },
+  {
+    "class": "safar.application.moajam_moaassir.SForm$5",
+    "methods": [
+      "public void mouseClicked(MouseEvent)"
+    ]
+  },
+  {
+    "class": "safar.basic.syntax.parser.model.Dependency",
+    "methods": [
+      "public final void setType(String)",
+      "public final Leaf getDependent()",
+      "public final void setDependent(Leaf)",
+      "public final Leaf getHead()",
+      "public final String getType()",
+      "public final void setHead(Leaf)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.util.Constantes",
+    "methods": []
+  },
+  {
+    "class": "safar.application.stemcounter.StemCounter$7",
+    "methods": [
+      "public int compare(Entry, Entry)",
+      "public volatile int compare(Object, Object)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.particle.util.Configuration",
+    "methods": [
+      "public static void main(String[])",
+      "public static String getProperty(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.model.ConjSuff",
+    "methods": [
+      "public final void addItem(Item)",
+      "public final void setItems(ArrayList)",
+      "public final ArrayList getItems()",
+      "public final void setClassName(String)",
+      "public final String toString()",
+      "public final String getClassName()"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.stemmer.impl.MotazStemmer",
+    "methods": [
+      "public final void stem(String, File)",
+      "public final void stem(File, File, String, String)",
+      "public final void stem(File, File)",
+      "public final void stem(File, File, String)",
+      "public final void stem(String, File, String)",
+      "public final List stem(String)",
+      "public final List stem(File)",
+      "public final List stem(File, String)",
+      "private static String lightStem(String)",
+      "private List stemFile(File, String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.interfaces.ISignalNounService",
+    "methods": [
+      "public abstract List getSignalNounsByReferenced(Referenced)",
+      "public abstract SignalNoun getSignalNounByVoweledForm(String)",
+      "public abstract boolean isSignalForReferenced(String, Referenced)",
+      "public abstract boolean isSignalForInterlocutor(String, Interlocutor)",
+      "public abstract boolean isSignalForProximity(String, String)",
+      "public abstract Referenced getReferencedByVoweledForm(String)",
+      "public abstract Interlocutor getLocutorByVoweledForm(String)",
+      "public abstract List getSignalNounsByProximity(String)",
+      "public abstract boolean isSignalForMorhpoSyntCas(String, String)",
+      "public abstract String getRefByVoweledForm(String)",
+      "public abstract String getSampleByVoweledForm(String)",
+      "public abstract String getProximityByVoweledForm(String)",
+      "public abstract boolean isSignalForReferencedNumber(String, String)",
+      "public abstract List getSignalNounsByInterlocutor(Interlocutor)",
+      "public abstract List getSignalNounsByReferencedGender(String)",
+      "public abstract SignalNoun getSignalNounByUnvoweledForm(String)",
+      "public abstract String getMorhpoSyntCasByVoweledForm(String)",
+      "public abstract boolean isSignalForInterlocutorGender(String, String)",
+      "public abstract List getSignalNounsByUnvoweledForm(String)",
+      "public abstract List getSignalNounsByInterlocutorNumber(String)",
+      "public abstract List getSignalNounsByMorhpoSyntCas(String)",
+      "public abstract boolean isSignalForReferencedGender(String, String)",
+      "public abstract boolean isSignalForInterlocutorNumber(String, String)",
+      "public abstract String getVoweledFormByUnvoweledForm(String)",
+      "public abstract String getUnvoweledFormByVoweledForm(String)",
+      "public abstract List getSignalNounsByInterlocutorGender(String)",
+      "public abstract List getSignalNounsByReferencedNumber(String)",
+      "public abstract boolean isSignalNoun(String)",
+      "public abstract List getSignalNounsList()"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.stemmer.impl.SAFARStemmer",
+    "methods": [
+      "public static void main(String[])"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.particle.model.Complement",
+    "methods": [
+      "public final void setSample(String)",
+      "public final String getSample()",
+      "public final void setSprop(String)",
+      "public final String getSprop()",
+      "public final void setRef(String)",
+      "public final String getCdesc()",
+      "public final void setCdesc(String)",
+      "public final String toString()",
+      "public final String getRef()"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_tafaoli.SForm$1",
+    "methods": [
+      "public void mouseClicked(MouseEvent)"
+    ]
+  },
+  {
+    "class": "safar.util.transliteration.factory.TransliteratorFactory",
+    "methods": [
+      "public static ITransliterator getImplementation(String)",
+      "public static ITransliterator getSAFARTransliteratorImplementation()"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.SummarizerFrame",
+    "methods": [
+      "static void access$000(SummarizerFrame, ActionEvent)",
+      "private void initComponents()",
+      "private void jButton1ActionPerformed(ActionEvent)",
+      "private static String[][] sortSentenceScore(Map, int)",
+      "private static Map countFreq(List)",
+      "public static void main(String[])",
+      "private static void print(String[][])"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.affixes.interfaces.ICliticService",
+    "methods": [
+      "public abstract boolean isCliticForType(String, String, String)",
+      "public abstract List getAllClitics()",
+      "public abstract List getCliticsByType(String)",
+      "public abstract List getClitics(String, String)",
+      "public abstract List getClitics(String)",
+      "public abstract boolean isClitic(String, String)"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_moaassir.ProgressBar$Task",
+    "methods": [
+      "public volatile Object doInBackground()",
+      "public Void doInBackground()",
+      "public void done()"
+    ]
+  },
+  {
+    "class": "safar.util.normalization.interfaces.INormalizer",
+    "methods": [
+      "public abstract void normalize(String, File)",
+      "public abstract void normalize(String, File, String, String)",
+      "public abstract void normalize(File, String, File)",
+      "public abstract void normalize(File, String, File, String, String)",
+      "public abstract String normalize(String)",
+      "public abstract String normalize(String, String, String)",
+      "public abstract String normalize(File, String)",
+      "public abstract String normalize(File, String, String, String)"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_moaassir.ProgressBar",
+    "methods": [
+      "static JButton access$000(ProgressBar)",
+      "public void actionPerformed(ActionEvent)",
+      "private static void createAndShowGUI()",
+      "public void propertyChange(PropertyChangeEvent)",
+      "static void access$200()",
+      "static JFrame access$100()",
+      "public static void main(String[])"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_tafaoli.SForm$4",
+    "methods": [
+      "public void mouseClicked(MouseEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.particle.interfaces.IParticleService",
+    "methods": [
+      "public abstract List getParticles()",
+      "public abstract boolean isParticle(String)",
+      "public abstract List getParticleByMClass(String)",
+      "public abstract Particle getVoweledParticleByUnvoweledForm(String)",
+      "public abstract List getComplements(String)",
+      "public abstract List getComplements()",
+      "public abstract List getMClasses()",
+      "public abstract List getMClasses(String)"
+    ]
+  },
+  {
+    "class": "safar.application.stemcounter.StemCounter",
+    "methods": [
+      "static void access$000(StemCounter, ActionEvent)",
+      "static void access$300(StemCounter, ActionEvent)",
+      "private void initComponents()",
+      "static void access$200(StemCounter, ActionEvent)",
+      "static void access$100(StemCounter, ActionEvent)",
+      "private void jMenuItem1ActionPerformed(ActionEvent)",
+      "private void jButton1ActionPerformed(ActionEvent)",
+      "private static String[][] countAndSort(List, int)",
+      "public static void launchConsole(String, int)",
+      "public static void launchGUI()",
+      "private void topxActionPerformed(ActionEvent)",
+      "private void stemmerComboActionPerformed(ActionEvent)",
+      "public static void main(String[])",
+      "private static void print(String[][])"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.model.Example",
+    "methods": [
+      "public final String getExample()",
+      "public final void setExample(String)",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.stemmer.model.StemmerAnalysis",
+    "methods": [
+      "public final void setType(String)",
+      "public final String getAdditionalInfo()",
+      "public final String getMorpheme()",
+      "public final void setAdditionalInfo(String)",
+      "public final void setMorpheme(String)",
+      "public final String toString()",
+      "public final String getType()"
+    ]
+  },
+  {
+    "class": "safar.application.stemcounter.StemCounter$5",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.contemporary.model.LexicalEntry",
+    "methods": [
+      "public final String getDescription()",
+      "public final List getMeanings()",
+      "public final String getLemme()",
+      "public final void addMeaning(Meaning)",
+      "public final void setType(String)",
+      "public final void setRoot(String)",
+      "public final void setMeanings(ArrayList)",
+      "public final void setDescription(String)",
+      "public final String getPlp()",
+      "public final void setPlp(String)",
+      "public final void setLemme(String)",
+      "public final String getPl()",
+      "public final void setPlf(String)",
+      "public final void setPl(String)",
+      "public final String getMas()",
+      "public final void setMas(String)",
+      "public final void setFem(String)",
+      "public final String getDu()",
+      "public final void setSin(String)",
+      "public final String getFem()",
+      "public final String getDomaine()",
+      "public final void setDu(String)",
+      "public final String getPlf()",
+      "public final String getSin()",
+      "public final void setDomaine(String)",
+      "public final String toString()",
+      "public final String getRoot()",
+      "public final String getType()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.model.SpecialVerbs",
+    "methods": [
+      "public final List getSpecialVerbs()",
+      "public final void addSpecialVerb(SpecialVerb)",
+      "public final void setSpecialVerbs(ArrayList)"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.analyzer.model.MorphologyAnalysis",
+    "methods": [
+      "public final String getWordType()",
+      "public final boolean isVerb()",
+      "public final boolean isNoun()",
+      "public final boolean isParticle()",
+      "public final void setType(String)",
+      "public final String getVoweledWord()",
+      "public final String getAdditionalInfo()",
+      "public final void setWordType(String)",
+      "public final void setVoweledWord(String)",
+      "public final void setAdditionalInfo(String)",
+      "public final Suffix getSuffix()",
+      "public final Prefix getPrefix()",
+      "public final Stem getStem()",
+      "public final void setSuffix(Suffix)",
+      "public final void setPrefix(Prefix)",
+      "public final void setStem(Stem)",
+      "public String toString()",
+      "public final void setPriority(String)",
+      "public final String getPriority()",
+      "public final String getType()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.model.Punctuations",
+    "methods": [
+      "public List getPunctuations()",
+      "public void addPunctuation(Punctuation)",
+      "public void setPunctuations(List)"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.analyzer.model.Stem",
+    "methods": [
+      "public final String getUnvoweledForm()",
+      "public final String getVoweledForm()",
+      "public final void setVoweledForm(String)",
+      "public final void setUnvoweledForm(String)",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.contemporary.util.Configuration",
+    "methods": [
+      "public static void main(String[])",
+      "public static String getProperty(String)"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_moaassir.ProgressBar$1",
+    "methods": [
+      "public void run()"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.analyzer.model.NounMorphologyAnalysis",
+    "methods": [
+      "public final String getPattern()",
+      "public final String getGender()",
+      "public final String getPos()",
+      "public final void setGender(String)",
+      "public final String getCaze()",
+      "public final void setNumber(String)",
+      "public final void setRoot(String)",
+      "public final void setPos(String)",
+      "public final void setCaze(String)",
+      "public final String getMood()",
+      "public final void setPattern(String)",
+      "public final void setMood(String)",
+      "public final String toString()",
+      "public final String getState()",
+      "public final void setState(String)",
+      "public final String getRoot()",
+      "public final String getNumber()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.MorphPptes",
+    "methods": [
+      "public final String getGender()",
+      "public final void setGender(String)",
+      "public final void setNumber(String)",
+      "public final void setPerson(String)",
+      "public final String getPerson()",
+      "public final String getMorhpoSyntCas()",
+      "public final void setMorhpoSyntCas(String)",
+      "public final String toString()",
+      "public final String getNumber()"
+    ]
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.ContextMenuMouseListener$5",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.basic.syntax.parser.model.OneParsingAnalysis",
+    "methods": [
+      "public final void removeAllDependency()",
+      "public final void removeDependency(Dependency)",
+      "public final void setDependency(ArrayList)",
+      "public final void addDependency(Dependency)",
+      "public final ArrayList getDependency()",
+      "public final void setTree(Tree)",
+      "public final Tree getTree()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.SignalNoun",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledform()",
+      "public final void setVoweledform(String)",
+      "public final void setUnvoweledform(String)",
+      "public final void setSample(String)",
+      "public final String getSample()",
+      "public final void setSprop(String)",
+      "public final String getSprop()",
+      "public final void setRef(String)",
+      "public final void addInterlocutor(Interlocutor)",
+      "public final void addReferenced(Referenced)",
+      "public final String getMorhpoSyntCas()",
+      "public final String getProximity()",
+      "public final void setReferenced(Referenced)",
+      "public final Interlocutor getInterlocutor()",
+      "public final Referenced getReferenced()",
+      "public final void setProximity(String)",
+      "public final void setMorhpoSyntCas(String)",
+      "public final void setInterlocutor(Interlocutor)",
+      "public final String toString()",
+      "public final String getRef()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.model.Items",
+    "methods": [
+      "public final void addItem(Item)",
+      "public final void setItems(ArrayList)",
+      "public final ArrayList getItems()"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_moaassir.SForm$1",
+    "methods": [
+      "public void mouseClicked(MouseEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.interfaces.INounsParticleService",
+    "methods": [
+      "public abstract List getParticles()",
+      "public abstract boolean isParticle(String)",
+      "public abstract List getParticleByMClass(String)",
+      "public abstract NounParticle getVoweledParticleByUnvoweledForm(String)",
+      "public abstract List getComplements(String)",
+      "public abstract List getComplements()",
+      "public abstract List getMClasses()",
+      "public abstract List getMClasses(String)"
+    ]
+  },
+  {
+    "class": "safar.basic.syntax.parser.factory.ParserFactory",
+    "methods": [
+      "public static IParser getImplementation(String)",
+      "public static IParser getStanfordParserImplementation()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.affixes.util.Constantes",
+    "methods": []
+  },
+  {
+    "class": "safar.application.stemcounter.StemCounter$6",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.application.stemcounter.StemCounter$1",
+    "methods": [
+      "public void run()"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.ContextMenuMouseListener$4",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.affixes.factory.CliticFactory",
+    "methods": [
+      "public static ISuffixService getSuffixImplementation()",
+      "public static ICliticService getCliticImplementation()",
+      "public static IPrefixService getPrefixImplementation()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.particle.model.Particle",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledform()",
+      "public final void setVoweledform(String)",
+      "public final void setUnvoweledform(String)",
+      "public final void addMClass(MClass)",
+      "public final void setMClasses(ArrayList)",
+      "public final List getMClasses()",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.util.Configuration",
+    "methods": [
+      "public static void main(String[])",
+      "public static String getProperty(String)"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.stemmer.interfaces.IStemmer",
+    "methods": [
+      "public abstract void stem(String, File, String)",
+      "public abstract void stem(File, File)",
+      "public abstract void stem(File, File, String)",
+      "public abstract void stem(File, File, String, String)",
+      "public abstract List stem(String)",
+      "public abstract List stem(File)",
+      "public abstract List stem(File, String)",
+      "public abstract void stem(String, File)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.util.Configuration",
+    "methods": [
+      "public static void main(String[])",
+      "public static String getProperty(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.util.Configuration",
+    "methods": [
+      "public static void main(String[])",
+      "public static String getProperty(String)"
+    ]
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.ContextMenuMouseListener$1",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.contemporary.model.Meaning",
+    "methods": [
+      "public final String getDescription()",
+      "public final void addSemantic(Semantics)",
+      "public final List getSemantics()",
+      "public final void addAdExamples(AddExample)",
+      "public final List getAdExamples()",
+      "public final String getExample()",
+      "public final void setSemantics(ArrayList)",
+      "public final void setAdExamples(ArrayList)",
+      "public final void setDescription(String)",
+      "public final void setExample(String)",
+      "public final void setDomain(String)",
+      "public final String getDomain()",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.application.stemcounter.ContextMenuMouseListener$5",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.util.transliteration.interfaces.ITransliterator",
+    "methods": [
+      "public abstract void transliterateArabicToLatin(File, String, String, File)",
+      "public abstract void transliterateArabicToLatin(String, String, File)",
+      "public abstract String transliterateArabicToLatin(File, String, String)",
+      "public abstract String transliterateArabicToLatin(String, String)",
+      "public abstract void transliterateLatinToArabic(String, String, File)",
+      "public abstract void transliterateLatinToArabic(File, String, String, File)",
+      "public abstract String transliterateLatinToArabic(File, String, String)",
+      "public abstract String transliterateLatinToArabic(String, String)"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.analyzer.model.VerbMorphologyAnalysis",
+    "methods": [
+      "public final String getPattern()",
+      "public final String getTransitive()",
+      "public final void setInpartial(String)",
+      "public final String getInpartial()",
+      "public final void setTransitive(String)",
+      "public final String getPos()",
+      "public final void setRoot(String)",
+      "public final void setPos(String)",
+      "public final void setPattern(String)",
+      "public final String toString()",
+      "public final String getRoot()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.Referenced",
+    "methods": [
+      "public final String getGender()",
+      "public final void setGender(String)",
+      "public final void setNumber(String)",
+      "public final String toString()",
+      "public final String getNumber()"
+    ]
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.MorphoSyntacticProcessor$3",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.model.Letter",
+    "methods": [
+      "public Description getDescription()",
+      "public Translit getTranslit()",
+      "public void setTranslit(Translit)",
+      "public void setDescription(Description)",
+      "public Display getDisplay()",
+      "public void setDisplay(Display)",
+      "public void setCode(Code)",
+      "public Code getCode()",
+      "public String toString()"
+    ]
+  },
+  {
+    "class": "safar.application.stemcounter.ContextMenuMouseListener$2",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_moaassir.SForm$3",
+    "methods": [
+      "public void mouseClicked(MouseEvent)"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.SummarizerFrame$3",
+    "methods": [
+      "public int compare(Entry, Entry)",
+      "public volatile int compare(Object, Object)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.interfaces.IParticleService",
+    "methods": [
+      "public abstract List getParticlesByUnvoweledForm(String)",
+      "public abstract List getParticles()",
+      "public abstract List getParticlesByRoot(String)",
+      "public abstract boolean isParticleRoot(String)",
+      "public abstract boolean isParticle(String)",
+      "public abstract Particle getParticleByVoweledForm(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.interfaces.IPPsService",
+    "methods": [
+      "public abstract PP getPersonalPronounsById(String)",
+      "public abstract List getPersonalPronounsList()"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.analyzer.factory.MorphologyAnalyzerFactory",
+    "methods": [
+      "public static IMorphologyAnalyzer getImplementation(String)",
+      "public static IMorphologyAnalyzer getMADAMIRAImplementation()",
+      "public static IMorphologyAnalyzer getAlkhalilImplementation()",
+      "public static IMorphologyAnalyzer getBAMAImplementation()"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_moaassir.SForm$2",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.stemmer.impl.TashaphyneStemmer",
+    "methods": [
+      "public final void stem(String, File)",
+      "public final void stem(File, File, String, String)",
+      "public final void stem(File, File)",
+      "public final void stem(File, File, String)",
+      "public final void stem(String, File, String)",
+      "public final List stem(String)",
+      "public final List stem(File)",
+      "public final List stem(File, String)",
+      "private List stemFile(File, String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.factory.InteractiveDictFactory",
+    "methods": [
+      "public static INounService getNounsImplementation()",
+      "public static IParticleService getParticlesImplementation()",
+      "public static IVerbService getVerbsImplementation()"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.analyzer.model.SuffixItem",
+    "methods": [
+      "public final String getClazz()",
+      "public final void setClazz(String)",
+      "public final String toString()",
+      "public final String getEntry()",
+      "public final void setEntry(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.CMorphPptes",
+    "methods": [
+      "public final String getGender()",
+      "public final void setGender(String)",
+      "public final void setNumber(String)",
+      "public final String toString()",
+      "public final String getNumber()"
+    ]
+  },
+  {
+    "class": "safar.basic.morphology.stemmer.impl.Light10Stemmer",
+    "methods": [
+      "public final void stem(String, File)",
+      "public final void stem(File, File, String, String)",
+      "public final void stem(File, File)",
+      "public final void stem(File, File, String)",
+      "public final void stem(String, File, String)",
+      "public final List stem(String)",
+      "public final List stem(File)",
+      "public final List stem(File, String)",
+      "private List stemFile(File, String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.model.Nouns",
+    "methods": [
+      "public final List getNouns()",
+      "public final void addNoun(Noun)",
+      "public final void setNouns(List)"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.Summarizer$1",
+    "methods": [
+      "public int compare(Entry, Entry)",
+      "public volatile int compare(Object, Object)"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.ContextMenuMouseListener$3",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.util.normalization.impl.SAFARNormalizer",
+    "methods": [
+      "private void saveNormalizationResultAsFile(String, File)",
+      "public void normalize(String, File, String, String)",
+      "public void normalize(File, String, File)",
+      "public void normalize(File, String, File, String, String)",
+      "public void normalize(String, File)",
+      "public String normalize(String, String, String)",
+      "public String normalize(File, String)",
+      "public String normalize(File, String, String, String)",
+      "public String normalize(String)"
+    ]
+  },
+  {
+    "class": "safar.util.splitting.interfaces.ISentenceSplitter",
+    "methods": [
+      "public abstract void split(String, String, String, File)",
+      "public abstract void split(String, String, String, File, String)",
+      "public abstract void split(File, String, File)",
+      "public abstract void split(File, String, String, File)",
+      "public abstract void split(File, String, String, File, String)",
+      "public abstract void split(File, String, String, File, String, String)",
+      "public abstract String[] split(String)",
+      "public abstract String[] split(String, String, String)",
+      "public abstract String[] split(File)",
+      "public abstract String[] split(File, String, String)",
+      "public abstract String[] split(File, String, String, String)",
+      "public abstract void split(String, File)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.util.Configuration",
+    "methods": [
+      "public static void main(String[])",
+      "public static String getProperty(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.util.Constantes",
+    "methods": []
+  },
+  {
+    "class": "safar.resources.lexicon.affixes.model.Prefix",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledform()",
+      "public final void setType(String)",
+      "public final List getSinglePrefixes()",
+      "public final void addSinglePrefix(SinglePrefix)",
+      "public final void setVoweledform(String)",
+      "public final void setUnvoweledform(String)",
+      "public final void setSinglePrefixes(ArrayList)",
+      "public final String toString()",
+      "public final String getType()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.contemporary.model.Semantics",
+    "methods": [
+      "public final String getSemDes()",
+      "public final void setSemDes(String)",
+      "public final String getSemExp()",
+      "public final void setSemExp(String)",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.MorphoSyntacticProcessor$1",
+    "methods": [
+      "public void run()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.contemporary.model.AddExample",
+    "methods": [
+      "public final void setSource(String)",
+      "public final String getExample()",
+      "public final void setExample(String)",
+      "public final String toString()",
+      "public final String getSource()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.Interlocutor",
+    "methods": [
+      "public final String getGender()",
+      "public final void setGender(String)",
+      "public final void setNumber(String)",
+      "public final String toString()",
+      "public final String getNumber()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.model.PP",
+    "methods": [
+      "public final String getDescription()",
+      "public final String getGender()",
+      "public final String getPrefix()",
+      "public final void setGender(String)",
+      "public final void setPrefix(String)",
+      "public final void setNumber(String)",
+      "public final void setDescription(String)",
+      "public final void setPerson(String)",
+      "public final String getPerson()",
+      "public final String getPPid()",
+      "public final void setPPid(String)",
+      "public final String toString()",
+      "public final String getNumber()"
+    ]
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.ContextMenuMouseListener$2",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.ContextMenuMouseListener$3",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.util.benchmark.morphology.analyzer.WordMetrics",
+    "methods": [
+      "public String getWord()",
+      "public void setWord(String)",
+      "public void setRecall(double)",
+      "public double getRecall()",
+      "public void calculateMetrics()",
+      "public void setAccuracy(double)",
+      "public double getfMeasure()",
+      "public void setfMeasure(double)",
+      "public double getAccuracy()",
+      "public double getPrecision()",
+      "public void setPrecision(double)",
+      "public void setTotalAnalysisFromCorpus(int)",
+      "public void setTotalAnalysisFromImpl(int)",
+      "public int getTotalCorrectAnalyis()",
+      "public void setTotalIncorrectAnalyis(int)",
+      "public int getTotalIncorrectAnalyis()",
+      "public int getTotalAnalysisFromCorpus()",
+      "public int getTotalAnalysisFromImpl()",
+      "public void setTotalCorrectAnalyis(int)"
+    ]
+  },
+  {
+    "class": "safar.application.stemcounter.ContextMenuMouseListener$Actions",
+    "methods": [
+      "public static Actions[] values()",
+      "public static Actions valueOf(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.model.Letters",
+    "methods": [
+      "public List getLetters()",
+      "public void addLetter(Letter)",
+      "public void setLetters(List)"
+    ]
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.MorphoSyntacticProcessor$6",
+    "methods": [
+      "public void valueChanged(TreeSelectionEvent)"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_tafaoli.SForm$2",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.particle.factory.ParticleFactory",
+    "methods": [
+      "public static IParticleService getParticleImplementation()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.util.Constantes",
+    "methods": []
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.MorphoSyntacticProcessor",
+    "methods": [
+      "static void access$000(MorphoSyntacticProcessor, ActionEvent)",
+      "static JTree access$300(MorphoSyntacticProcessor)",
+      "private void initComponents()",
+      "static void access$200(MorphoSyntacticProcessor, ActionEvent)",
+      "static void access$100(MorphoSyntacticProcessor, ActionEvent)",
+      "static JLabel access$400(MorphoSyntacticProcessor)",
+      "private void jMenuItem1ActionPerformed(ActionEvent)",
+      "private void jButton1ActionPerformed(ActionEvent)",
+      "public static void launchGUI()",
+      "private void drawTree(Tree, DefaultMutableTreeNode)",
+      "private static StringBuffer printTab()",
+      "private void MorphAnalyseActionPerformed(ActionEvent)",
+      "public static void main(String[])"
+    ]
+  },
+  {
+    "class": "safar.basic.syntax.parser.model.SentenceParsingAnalysis",
+    "methods": [
+      "public final ArrayList getListOfParsinganalysis()",
+      "public final void addOneParsingAnalysis(OneParsingAnalysis)",
+      "public final void setListOfParsinganalysis(ArrayList)",
+      "public final void printXMLTreesWithDependencies()",
+      "public final void printDependecies()",
+      "public final void printXMLTrees()",
+      "public final String getSentence()",
+      "public final void printChunks()",
+      "public final void printSimpleTrees()",
+      "public final void setSentence(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.model.Complement",
+    "methods": [
+      "public final void setSample(String)",
+      "public final String getSample()",
+      "public final void setSprop(String)",
+      "public final String getSprop()",
+      "public final void setRef(String)",
+      "public final String getCdesc()",
+      "public final void setCdesc(String)",
+      "public final String toString()",
+      "public final String getRef()"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.SummarizerHespress$1",
+    "methods": [
+      "public int compare(Entry, Entry)",
+      "public volatile int compare(Object, Object)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.model.Verb",
+    "methods": [
+      "public final String getVoweledform()",
+      "public final String getUnvoweledform()",
+      "public final List getMeanings()",
+      "public final void addMeaning(Meaning)",
+      "public final String getPattern()",
+      "public final void setRoot(String)",
+      "public final void setPattern(String)",
+      "public final void setVoweledform(String)",
+      "public final void setUnvoweledform(String)",
+      "public final void setMeanings(ArrayList)",
+      "public final void setPresentForm(String)",
+      "public final String getPresentForm()",
+      "public final String toString()",
+      "public final String getRoot()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.interactive.model.Meaning",
+    "methods": [
+      "public final String getDescription()",
+      "public final List getExamples()",
+      "public final void addExample(Example)",
+      "public final String getSemanticScop()",
+      "public final void setSemanticScop(String)",
+      "public final void setExamples(ArrayList)",
+      "public final void setDescription(String)",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.affixes.interfaces.ISuffixService",
+    "methods": [
+      "public abstract List getSuffix(String)",
+      "public abstract List getSuffixes(String, String)",
+      "public abstract List getSuffixes(String)",
+      "public abstract List getSingleSuffixes()",
+      "public abstract List getSuffixesByType(String)",
+      "public abstract List getAllSuffixes()",
+      "public abstract boolean isSuffixForType(String, String)",
+      "public abstract boolean isSingleSuffix(String)",
+      "public abstract boolean isSuffix(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.alphabet.model.Vowel",
+    "methods": [
+      "public Description getDescription()",
+      "public Translit getTranslit()",
+      "public void setTranslit(Translit)",
+      "public void setDescription(Description)",
+      "public String getDisplay()",
+      "public void setDisplay(String)",
+      "public void setCode(Code)",
+      "public Code getCode()",
+      "public String toString()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_verbs.interfaces.IConjService",
+    "methods": [
+      "public abstract List getSVConj(String)",
+      "public abstract List getSVsConj()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.particle.model.MClass",
+    "methods": [
+      "public final String getMdesc()",
+      "public final void setMdesc(String)",
+      "public final void addComplement(Complement)",
+      "public final List getComplements()",
+      "public final void setComplements(ArrayList)",
+      "public final String toString()"
+    ]
+  },
+  {
+    "class": "safar.application.summarization.Summarizer",
+    "methods": [
+      "private static String[][] sortSentenceScore(Map, int)",
+      "private static Map countFreq(List)",
+      "public static void main(String[])",
+      "private static void print(String[][])"
+    ]
+  },
+  {
+    "class": "safar.application.stemcounter.ContextMenuMouseListener$4",
+    "methods": [
+      "public void actionPerformed(ActionEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.factory.SpecialNounsFactory",
+    "methods": [
+      "public static IConnectedNounService getConnectedNounImplementation()",
+      "public static INounsParticleService getNounsParticleImplementation()",
+      "public static ISeparatedPronounService getSeparatedPronounImplementation()",
+      "public static ISignalNounService getSignalNounImplementation()"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.util.Constantes",
+    "methods": []
+  },
+  {
+    "class": "safar.application.morphosyntactic_processor.ContextMenuMouseListener",
+    "methods": [
+      "static JTextComponent access$000(ContextMenuMouseListener)",
+      "public void mouseClicked(MouseEvent)",
+      "static String access$100(ContextMenuMouseListener)",
+      "static Actions access$202(ContextMenuMouseListener, Actions)",
+      "static String access$102(ContextMenuMouseListener, String)"
+    ]
+  },
+  {
+    "class": "safar.application.moajam_tafaoli.SForm$5",
+    "methods": [
+      "public void mouseClicked(MouseEvent)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.particle.model.Particles",
+    "methods": [
+      "public final List getParticles()",
+      "public final void addParticle(Particle)",
+      "public final void setParticles(ArrayList)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.particles.special_nouns.interfaces.IConnectedNounService",
+    "methods": [
+      "public abstract boolean isConnectedNounForNumber(String, String)",
+      "public abstract List getConnectedNounsList()",
+      "public abstract List getConnectedNounsByNumber(String)",
+      "public abstract boolean isConnectedNounForGender(String, String)",
+      "public abstract List getConnectedNounsByGender(String)",
+      "public abstract CMorphPptes getCMorphPptesByUnvoweledForm(String)",
+      "public abstract ConnectedNoun getConnectedNounByVoweledForm(String)",
+      "public abstract ConnectedNoun getConnectedNounByUnvoweledForm(String)",
+      "public abstract CMorphPptes getCMorphPptesByVoweledForm(String)",
+      "public abstract boolean isConnectedNounForCMorphPptes(String, CMorphPptes)",
+      "public abstract List getConnectedNounsByCMorphPptes(CMorphPptes)",
+      "public abstract List giveDual(String)",
+      "public abstract List givePlural(String)",
+      "public abstract List giveMasculin(String)",
+      "public abstract List giveSingular(String)",
+      "public abstract List giveFeminin(String)",
+      "public abstract boolean isConnectedNoun(String)"
+    ]
+  },
+  {
+    "class": "safar.util.benchmark.morphology.analyzer.MorphologyAnalyzerMetrics",
+    "methods": [
+      "public final void setRecall(double)",
+      "public final double getRecall()",
+      "public double getF()",
+      "public void calculateF(int, int)",
+      "public void setF(double)",
+      "public final void setExecutionTime(double)",
+      "public void setGlobalRichness(double)",
+      "public double getGlobalRichness()",
+      "public final double getFMeasure()",
+      "public final void setAccuracy(double)",
+      "public final double getAccuracy()",
+      "public final double getPrecision()",
+      "public final void setPrecision(double)",
+      "public final void setFMeasure(double)",
+      "public final double getExecutionTime()",
+      "public void setListOfWordMetrics(List)",
+      "public List getListOfWordMetrics()",
+      "public final int getTotalCorpusWords()",
+      "public void calculateGlobalMetrics()",
+      "public void printListOfWordMetrics()",
+      "public final String getImplemantationName()",
+      "public final void setTotalCorpusWords(int)",
+      "public final void setImplemantationName(String)"
+    ]
+  },
+  {
+    "class": "safar.resources.lexicon.dictionnary.contemporary.interfaces.ILexiconService",
+    "methods": [
+      "public abstract boolean isLexicalEntry(String)",
+      "public abstract boolean isParticleRoot(String)",
+      "public abstract boolean isVerb(String)",
+      "public abstract boolean isVerbRoot(String)",
+      "public abstract boolean isNounRoot(String)",
+      "public abstract boolean isNoun(String)",
+      "public abstract boolean isParticle(String)",
+      "public abstract List getLexicon()",
+      "public abstract List getLexicalEntriesByLemme(String)",
+      "public abstract LexicalEntry getLexicalEntryByLemme(String)",
+      "public abstract List getLexicalEntriesByRoot(String)",
+      "public abstract List getLexicalEntriesByType(String)",
+      "public abstract boolean isRoot(String)"
+    ]
+  }
+]
