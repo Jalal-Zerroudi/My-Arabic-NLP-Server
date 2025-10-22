@@ -24,14 +24,14 @@ All results are displayed in a **modern bilingual (Arabic/French)** interface po
 My-Arabic-NLP-Server
 ┣ 📂 src
 ┃ ┣ 📂 MainPackNLP
-┃ ┃ ┣ MainDashboardUI.java      → Main Swing interface
-┃ ┃ ┣ MapGenerator.java         → JSON generation logic
-┃ ┃ ┣ FileBrowserUI.java        → Custom file browser
+┃ ┃ ┣ MainDashboardUI.java       → Main Swing interface
+┃ ┃ ┣ MapGenerator.java          → JSON generation logic
+┃ ┃ ┣ FileBrowserUI.java         → Custom file browser
 ┃ ┗ 📂 data
-┃   ┗ sample-texts/             → Input Arabic text files
+┃   ┗ datat-test/AR_01.txt ...   → Input Arabic text files
 ┣ 📂 Map_Out
-┃ ┣ Frequence/                  → Map1 (Word Frequency)
-┃ ┗ Stemming/                   → Map2 (Root Analysis)
+┃ ┣ Frequence/                   → Map1 (Word Frequency)
+┃ ┗ Stemming/                    → Map2 (Root Analysis)
 ┗ README.md
 
 ```
