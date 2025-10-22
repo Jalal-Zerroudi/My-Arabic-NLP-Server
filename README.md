@@ -55,7 +55,7 @@ My-Arabic-NLP-Server
 
 | Dashboard | Map Analysis |
 |------------|---------------|
-| ![Dashboard](docs/dashboard.png) | ![Map Analysis 1](docs/map1_analysis.png) | ![Map Analysis 2](docs/map2_analysis.png)
+| ![Dashboard](docs/dashboard.png) | ![Map Analysis 1](docs/map1_analysis.png) | ![Map Analysis 2](docs/map2_analysis.png) |
 
 ---
 
