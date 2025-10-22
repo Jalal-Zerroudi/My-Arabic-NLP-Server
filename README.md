@@ -92,10 +92,3 @@ Master’s Student – Big Data & Intelligent Systems
 📍 FSDM – USMBA, Fez, Morocco  
 📧 [jalal.zerroudi@gmail.com](mailto:jalal.zerroudi@gmail.com)  
 🔗 [LinkedIn](https://www.linkedin.com) · [GitHub](https://github.com/Jalal-Zerroudi)
-
----
-
-### 🌟 Star this repo if you find it helpful!
-
-Souhaites-tu que je t’ajoute une version **bilingue (FR + AR)** du README — avec la description arabe alignée à droite et les sections en miroir (ex : « نظرة عامة », « المميزات », etc.) pour ton dépôt GitHub ?
-Cela donnerait un look vraiment professionnel et unique pour un projet NLP arabe.
