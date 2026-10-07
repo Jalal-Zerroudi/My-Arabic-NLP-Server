@@ -53,7 +53,7 @@ My-Arabic-NLP-Server
 
 ##  UI Preview
 
-| Dashboard | Map Analysis 1 |Map Analysis 1 |
+| Dashboard | Map Analysis 1 | Map Analysis 2 |
 |------------|---------------|---------------|
 | ![Dashboard](docs/dashboard.png) | ![Map Analysis 1](docs/map1_analysis.png) | ![Map Analysis 2](docs/map2_analysis.png) |
 
