@@ -65,8 +65,12 @@ public class safar_classes {
             String protocol = resource.getProtocol();
 
             if ("file".equals(protocol)) {
-                File directory = new File(resource.getFile());
-                classes.addAll(findClasses(directory, packageName));
+                try {
+                    File directory = new File(resource.toURI());
+                    classes.addAll(findClasses(directory, packageName));
+                } catch (URISyntaxException e) {
+                    throw new IOException("URL de package invalide : " + resource, e);
+                }
             } else if ("jar".equals(protocol)) {
                 try {
                     JarURLConnection conn = (JarURLConnection) resource.openConnection();
