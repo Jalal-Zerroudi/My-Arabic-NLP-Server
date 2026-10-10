@@ -40,7 +40,8 @@ A Java desktop application for analyzing Arabic text, generating frequency maps,
 3. Configure the project to use JDK 21.
 4. Download or otherwise obtain the required libraries, respecting their respective licenses.
 5. Open **Project → Properties → Java Build Path → Libraries** and replace the unavailable JAR entries with the local paths to your copies.
-6. Run `MainPackNLP.MainDashboardUI` as a Java application.
+6. In **Run → Run Configurations → Arguments**, set the working directory to the repository root. The application uses relative paths for `src/data/`, `Map_Out/`, and the stop-word file.
+7. Run `MainPackNLP.MainDashboardUI` as a Java application.
 
 The application entry point is the `main` method in:
 
@@ -55,6 +56,9 @@ src/MainPackNLP/MainDashboardUI.java
 3. Generate **Map 2** to perform SAFAR-based stemming.
 4. Review totals, unique words, top terms, and charts in the dashboard.
 5. Consult the activity log for operation details.
+
+> [!NOTE]
+> **Map 3 is not implemented yet.** Its dashboard button only displays an informational message and does not generate an output file.
 
 Generated results are stored under:
 
