@@ -14,9 +14,12 @@ import safar.basic.morphology.stemmer.model.WordStemmerAnalysis;
 
 public class MapGenerator {
 
-    private static final String DATE_SUFFIX = new SimpleDateFormat("yyyy-MM-dd-HH-mm").format(new Date());
     private static final String OUTPUT_DIR = "Map_Out";
     private static final String DEFAULT_STOP_WORDS_PATH = "src/data/AR_Stop_Words.json";
+
+    private static String createDateSuffix() {
+        return new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
+    }
 
     // ----------------------------------------------------------------------
     // Génération de Map1 : Fréquence des mots arabes
@@ -38,7 +41,7 @@ public class MapGenerator {
             }
         }
 
-        String outputPath = OUTPUT_DIR + "/Frequence/Map1_Frequence_" + DATE_SUFFIX + ".json";
+        String outputPath = OUTPUT_DIR + "/Frequence/Map1_Frequence_" + createDateSuffix() + ".json";
         writeJson(outputPath, map1);
         System.out.println("✅ Map1 généré : " + outputPath);
     }
@@ -121,7 +124,7 @@ public class MapGenerator {
             System.out.println("🌿 Racinisation terminée pour : " + filePath);
         }
 
-        String outputPath = OUTPUT_DIR + "/Stemming/Map2_Stemming_" + DATE_SUFFIX + ".json";
+        String outputPath = OUTPUT_DIR + "/Stemming/Map2_Stemming_" + createDateSuffix() + ".json";
         writeJson(outputPath, map2);
         System.out.println("✅ Map2 généré : " + outputPath);
     }
