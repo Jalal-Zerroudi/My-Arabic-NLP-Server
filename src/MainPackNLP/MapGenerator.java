@@ -110,13 +110,14 @@ public class MapGenerator {
 
             for (String word : words.keySet()) {
                 String normalizedWord = normalizeArabic(word);
+                int frequency = words.get(word).intValue();
                 try {
                     List<WordStemmerAnalysis> analyses = stemmer.stem(normalizedWord);
                     String stem = extractStemSafar(analyses, normalizedWord);
                     stem = cleanSafarOutput(stem);
-                    stems.put(stem, stems.getOrDefault(stem, 0) + 1);
+                    stems.put(stem, stems.getOrDefault(stem, 0) + frequency);
                 } catch (Exception e) {
-                    stems.put(normalizedWord, stems.getOrDefault(normalizedWord, 0) + 1);
+                    stems.put(normalizedWord, stems.getOrDefault(normalizedWord, 0) + frequency);
                 }
             }
 
