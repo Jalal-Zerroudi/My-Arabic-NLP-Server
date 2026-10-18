@@ -65,6 +65,19 @@ Generated results are stored under:
 - `Map_Out/Frequence/` for frequency analyses
 - `Map_Out/Stemming/` for stemming analyses
 
+## How to interpret the results
+
+Map 1 is a count of processed tokens, not a count of every word in the original document. In `MapGenerator.java`, preprocessing:
+
+- replaces characters outside the Unicode Arabic block and whitespace with spaces;
+- normalizes `إ/أ/آ/ا → ا`, `ى/ئ → ي`, `ؤ → و`, and `ة → ه`;
+- removes the diacritics listed in `normalizeArabic`;
+- discards empty tokens, tokens shorter than two characters, and normalized stop words from `src/data/AR_Stop_Words.json`.
+
+Distinct spellings can therefore share one frequency entry. Map 2 adds the Map 1 frequencies when several words produce the same stem; it does not merely count distinct source spellings. If SAFAR throws an exception for a word, its normalized form is retained as the fallback key.
+
+Each JSON output is keyed first by input file path, then by token or stem, with integer counts as values. A file that fails to read is logged and omitted from Map 1. If the stop-word file cannot be loaded, processing continues without stop-word filtering, so inspect the activity log before comparing results.
+
 ## Project structure
 
 ```text
