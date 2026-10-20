@@ -65,6 +65,19 @@ Generated results are stored under:
 - `Map_Out/Frequence/` for frequency analyses
 - `Map_Out/Stemming/` for stemming analyses
 
+### Which input does Map 2 use?
+
+The **Generate Map 2** button automatically reads the `.json` file in
+`Map_Out/Frequence/` with the latest filesystem modification time. It does
+not use the currently selected source files or the JSON selected in an analysis
+tab. Selection in an analysis tab only controls which result is displayed.
+
+To stem your current inputs, generate Map 1 first and confirm its success in the
+activity log, then generate Map 2 without copying or editing other frequency
+JSON files in between. Copying or editing an older result can change its
+modification time and make it the next Map 2 input. If no frequency JSON exists,
+Map 2 logs a warning and returns without generating a result.
+
 ## How to interpret the results
 
 Map 1 is a count of processed tokens, not a count of every word in the original document. In `MapGenerator.java`, preprocessing:
