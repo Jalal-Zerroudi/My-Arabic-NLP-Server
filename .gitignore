@@ -1,0 +1,11 @@
+# Java build output
+/bin/
+*.class
+
+# Generated NLP analysis artifacts
+/Map_Out/Frequence/Map1_Frequence_*.json
+/Map_Out/Stemming/Map2_Stemming_*.json
+
+# Local operating-system files
+.DS_Store
+Thumbs.db

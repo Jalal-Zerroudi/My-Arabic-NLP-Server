@@ -65,6 +65,10 @@ Generated results are stored under:
 - `Map_Out/Frequence/` for frequency analyses
 - `Map_Out/Stemming/` for stemming analyses
 
+### Generated files and Git
+
+The repository's `.gitignore` excludes newly generated Map 1/Map 2 JSON files and Java build output under `bin/`. This keeps routine runs and local compilation from adding timestamped artifacts to future commits. The sample outputs and compiled classes already tracked in the repository remain tracked—ignore rules do not remove existing files from Git history.
+
 ### Which input does Map 2 use?
 
 The **Generate Map 2** button automatically reads the `.json` file in
