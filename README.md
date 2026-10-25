@@ -67,7 +67,7 @@ Generated results are stored under:
 
 ### Generated files and Git
 
-The repository's `.gitignore` excludes newly generated Map 1/Map 2 JSON files and Java build output under `bin/`. This keeps routine runs and local compilation from adding timestamped artifacts to future commits. The sample outputs and compiled classes already tracked in the repository remain tracked—ignore rules do not remove existing files from Git history.
+The repository's `.gitignore` excludes newly generated Map 1/Map 2 JSON files and Java build output under `bin/`. This keeps routine runs and local compilation from adding timestamped artifacts to future commits. Build the project locally to regenerate `bin/`; compiled classes and copied resources should not be committed.
 
 ### Which input does Map 2 use?
 
