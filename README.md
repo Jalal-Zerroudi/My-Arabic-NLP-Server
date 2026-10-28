@@ -65,6 +65,8 @@ Generated results are stored under:
 - `Map_Out/Frequence/` for frequency analyses
 - `Map_Out/Stemming/` for stemming analyses
 
+All text inputs, stop-word data, and generated JSON files are read and written explicitly as UTF-8, so Arabic content remains portable across operating systems.
+
 ### Generated files and Git
 
 The repository's `.gitignore` excludes newly generated Map 1/Map 2 JSON files and Java build output under `bin/`. This keeps routine runs and local compilation from adding timestamped artifacts to future commits. Build the project locally to regenerate `bin/`; compiled classes and copied resources should not be committed.

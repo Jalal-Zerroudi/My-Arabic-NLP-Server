@@ -1,9 +1,11 @@
 package MainPackNLP;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.stream.Stream;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -21,9 +23,6 @@ public class MapGenerator {
         return new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
     }
 
-    // ----------------------------------------------------------------------
-    // Génération de Map1 : Fréquence des mots arabes
-    // ----------------------------------------------------------------------
     public static void generateFrequencyMap(List<File> selectedFiles, String defaultFolder) throws IOException {
         Map<String, Map<String, Integer>> map1 = new HashMap<>();
         Files.createDirectories(Paths.get(OUTPUT_DIR, "Frequence"));
@@ -32,9 +31,10 @@ public class MapGenerator {
         System.out.println("✅ Stop words chargés : " + stopWords.size());
 
         if (selectedFiles == null || selectedFiles.isEmpty()) {
-            Files.walk(Paths.get(defaultFolder))
-                    .filter(Files::isRegularFile)
-                    .forEach(path -> processFileForFrequency(map1, path, stopWords));
+            try (Stream<Path> paths = Files.walk(Paths.get(defaultFolder))) {
+                paths.filter(Files::isRegularFile)
+                        .forEach(path -> processFileForFrequency(map1, path, stopWords));
+            }
         } else {
             for (File file : selectedFiles) {
                 processFileForFrequency(map1, file.toPath(), stopWords);
@@ -46,13 +46,10 @@ public class MapGenerator {
         System.out.println("✅ Map1 généré : " + outputPath);
     }
 
-    // ----------------------------------------------------------------------
-    // Traitement individuel d’un fichier pour Map1
-    // ----------------------------------------------------------------------
     private static void processFileForFrequency(Map<String, Map<String, Integer>> map, Path path, Set<String> stopWords) {
         try {
-            String content = new String(Files.readAllBytes(path), "UTF-8");
-            content = content.replaceAll("[^\\p{InArabic}\\s]", " "); // Garde uniquement arabe et espaces
+            String content = Files.readString(path, StandardCharsets.UTF_8);
+            content = content.replaceAll("[^\\p{InArabic}\\s]", " ");
             String[] words = content.trim().split("\\s+");
 
             Map<String, Integer> freq = new HashMap<>();
@@ -74,16 +71,11 @@ public class MapGenerator {
         }
     }
 
-    // ----------------------------------------------------------------------
-    // Génération de Map2 : Racinisation (Stemming)
-    // ----------------------------------------------------------------------
     public static void generateStemmingMap(String map1FilePath) throws IOException {
-        // Si le fichier Map1 n’existe pas → génération automatique
         File file = new File(map1FilePath);
         if (!file.exists()) {
             System.out.println("⚠️ Aucun Map1 trouvé, génération automatique...");
             generateFrequencyMap(null, "src/data");
-            // retrouver le dernier Map1
             File folder = new File(OUTPUT_DIR + "/Frequence");
             File[] jsons = folder.listFiles((d, n) -> n.startsWith("Map1_Frequence"));
             if (jsons == null || jsons.length == 0) {
@@ -93,11 +85,11 @@ public class MapGenerator {
             map1FilePath = file.getPath();
         }
 
-        // Charger Map1
         Gson gson = new Gson();
-        Reader reader = Files.newBufferedReader(Paths.get(map1FilePath));
-        Map<String, Map<String, Double>> map1 = gson.fromJson(reader, Map.class);
-        reader.close();
+        Map<String, Map<String, Double>> map1;
+        try (Reader reader = Files.newBufferedReader(Paths.get(map1FilePath), StandardCharsets.UTF_8)) {
+            map1 = gson.fromJson(reader, Map.class);
+        }
 
         Map<String, Map<String, Integer>> map2 = new HashMap<>();
         Files.createDirectories(Paths.get(OUTPUT_DIR, "Stemming"));
@@ -130,9 +122,6 @@ public class MapGenerator {
         System.out.println("✅ Map2 généré : " + outputPath);
     }
 
-    // ----------------------------------------------------------------------
-    // Extraction du stem depuis l’objet SAFAR
-    // ----------------------------------------------------------------------
     private static String extractStemSafar(List<WordStemmerAnalysis> analyses, String originalWord) {
         if (analyses == null || analyses.isEmpty()) return originalWord;
 
@@ -148,9 +137,6 @@ public class MapGenerator {
         return originalWord;
     }
 
-    // ----------------------------------------------------------------------
-    // Nettoyage du format SAFAR "{type= STEM, morpheme= ...}"
-    // ----------------------------------------------------------------------
     private static String cleanSafarOutput(String text) {
         if (text == null) return "";
         text = text.replaceAll("\\{.*morpheme\\s*=\\s*", "");
@@ -158,9 +144,6 @@ public class MapGenerator {
         return normalizeArabic(text.trim());
     }
 
-    // ----------------------------------------------------------------------
-    // Normalisation du texte arabe (unification orthographique)
-    // ----------------------------------------------------------------------
     private static String normalizeArabic(String text) {
         if (text == null) return "";
         return text
@@ -173,13 +156,10 @@ public class MapGenerator {
                 .trim();
     }
 
-    // ----------------------------------------------------------------------
-    // Lecture du fichier JSON des stop words arabes
-    // ----------------------------------------------------------------------
     private static Set<String> loadArabicStopWords(String path) {
         try {
             Gson gson = new Gson();
-            String json = new String(Files.readAllBytes(Paths.get(path)), "UTF-8");
+            String json = Files.readString(Paths.get(path), StandardCharsets.UTF_8);
             Map<String, List<String>> data = gson.fromJson(json, Map.class);
             Set<String> stopWords = new HashSet<>();
             for (String w : data.get("arabic_stopwords")) {
@@ -192,12 +172,9 @@ public class MapGenerator {
         }
     }
 
-    // ----------------------------------------------------------------------
-    // Écriture JSON formatée joliment
-    // ----------------------------------------------------------------------
     private static void writeJson(String filename, Object map) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        try (Writer writer = new FileWriter(filename)) {
+        try (Writer writer = Files.newBufferedWriter(Paths.get(filename), StandardCharsets.UTF_8)) {
             gson.toJson(map, writer);
         }
     }
