@@ -5,6 +5,8 @@ import javax.swing.border.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.*;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -292,7 +294,10 @@ public class MainDashboardUI extends JFrame {
             File[] files = new File(folderPath).listFiles((d, n) -> n.endsWith(".json"));
             if (files == null || files.length == 0) return;
             File latest = Arrays.stream(files).max(Comparator.comparingLong(File::lastModified)).get();
-            Map<String, Map<String, Double>> map = new Gson().fromJson(new FileReader(latest), Map.class);
+            Map<String, Map<String, Double>> map;
+            try (Reader reader = Files.newBufferedReader(latest.toPath(), StandardCharsets.UTF_8)) {
+                map = new Gson().fromJson(reader, Map.class);
+            }
             Map<String, Integer> freq = new HashMap<>();
             map.values().forEach(inner -> inner.forEach((k, v) -> freq.put(k, freq.getOrDefault(k, 0) + v.intValue())));
             updateStats(freq, map.size());
@@ -410,7 +415,7 @@ public class MainDashboardUI extends JFrame {
              return;
          }
 
-         try (FileReader reader = new FileReader(selected)) {
+         try (Reader reader = Files.newBufferedReader(selected.toPath(), StandardCharsets.UTF_8)) {
              Object parsed = new Gson().fromJson(reader, Object.class);
              Map<String, Integer> freq = new HashMap<>();
 
