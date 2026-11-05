@@ -2,6 +2,7 @@ package MainPackNLP;
 
 import java.io.*;
 import java.net.*;
+import java.nio.charset.StandardCharsets;
 import java.lang.reflect.*;
 import java.util.*;
 import java.util.jar.*;
@@ -115,7 +116,8 @@ public class safar_classes {
 
     /** 🧾 Export JSON minimaliste */
     private static void exportJson(List<Map<String, Object>> list, String fileName) {
-        try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
+        try (PrintWriter writer = new PrintWriter(new OutputStreamWriter(
+                new FileOutputStream(fileName), StandardCharsets.UTF_8))) {
             writer.println("[");
             for (int i = 0; i < list.size(); i++) {
                 Map<String, Object> item = list.get(i);
