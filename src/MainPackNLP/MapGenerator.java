@@ -35,18 +35,28 @@ public class MapGenerator {
 
         if (selectedFiles == null || selectedFiles.isEmpty()) {
             try (Stream<Path> paths = Files.walk(Paths.get(defaultFolder))) {
-                paths.filter(Files::isRegularFile)
+                paths.filter(MapGenerator::isTextFile)
                         .forEach(path -> processFileForFrequency(map1, path, stopWords));
             }
         } else {
             for (File file : selectedFiles) {
-                processFileForFrequency(map1, file.toPath(), stopWords);
+                Path path = file.toPath();
+                if (!isTextFile(path)) {
+                    System.out.println("⚠️ Fichier ignoré (format non pris en charge) : " + path);
+                    continue;
+                }
+                processFileForFrequency(map1, path, stopWords);
             }
         }
 
         String outputPath = OUTPUT_DIR + "/Frequence/Map1_Frequence_" + createDateSuffix() + ".json";
         writeJson(outputPath, map1);
         System.out.println("✅ Map1 généré : " + outputPath);
+    }
+
+    private static boolean isTextFile(Path path) {
+        return Files.isRegularFile(path)
+                && path.getFileName().toString().toLowerCase(Locale.ROOT).endsWith(".txt");
     }
 
     // ----------------------------------------------------------------------

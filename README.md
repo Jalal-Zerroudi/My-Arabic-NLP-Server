@@ -65,7 +65,7 @@ Generated results are stored under:
 - `Map_Out/Frequence/` for frequency analyses
 - `Map_Out/Stemming/` for stemming analyses
 
-All text inputs, stop-word data, and generated JSON files are read and written explicitly as UTF-8, so Arabic content remains portable across operating systems.
+All text inputs, stop-word data, and generated JSON files are read and written explicitly as UTF-8, so Arabic content remains portable across operating systems. Only regular `.txt` files are treated as corpus input; automatic scans skip other files under `src/data/` (including the stop-word JSON), and unsupported manual selections are reported and ignored.
 
 ### Generated files and Git
 
