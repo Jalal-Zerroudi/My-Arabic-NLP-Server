@@ -27,6 +27,17 @@ A Java desktop application for analyzing Arabic text, generating frequency maps,
 > [!IMPORTANT]
 > The repository does not include these dependency JARs. The committed Eclipse `.classpath` currently references paths on the original developer's Windows computer, so those entries must be replaced with paths available on your machine.
 
+### Dependency and classpath verification
+
+This repository is an Eclipse project and currently has no Maven or Gradle build file. Importing it does not download dependencies automatically: every required JAR must be present both on the Eclipse build path and on the runtime classpath. Keep the versions listed above aligned with `.classpath`; a different version may expose an incompatible API.
+
+Before launching the dashboard:
+
+1. Open **Project → Properties → Java Build Path → Libraries** and confirm that no entry is marked missing.
+2. Run **Project → Clean** and verify that Eclipse reports no compilation errors.
+3. Confirm that `src/data/AR_Stop_Words.json` and `src/data/data-test/` are visible from the repository root.
+4. If SAFAR reports `ClassNotFoundException` or `NoClassDefFoundError`, add the additional JARs distributed with your SAFAR installation to the same build and runtime classpaths.
+
 ## Setup and run
 
 1. Clone the repository:
