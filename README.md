@@ -68,6 +68,21 @@ src/MainPackNLP/MainDashboardUI.java
 4. Review totals, unique words, top terms, and charts in the dashboard.
 5. Consult the activity log for operation details.
 
+### Input selection and output provenance
+
+The source browser is rooted at `src/data/data-test/`. Select at least one file
+before generating Map 1; the dashboard logs a warning and stops when nothing is
+selected. Hold `Ctrl` while clicking to select multiple files. Only selected
+regular files whose names end in `.txt` are processed, including files reached
+through subdirectories; unsupported selections are ignored and reported.
+
+Each Map 1 JSON object uses the selected file's absolute path as its top-level
+key, and Map 2 preserves that key. Results can therefore contain machine-specific
+paths even when their token counts are identical. When comparing or publishing
+outputs from different computers, compare the nested counts and replace or
+relativize the path keys instead of treating a path difference as an NLP result
+difference.
+
 > [!NOTE]
 > **Map 3 is not implemented yet.** Its dashboard button only displays an informational message and does not generate an output file.
 
