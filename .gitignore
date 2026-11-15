@@ -6,6 +6,10 @@
 /Map_Out/Frequence/Map1_Frequence_*.json
 /Map_Out/Stemming/Map2_Stemming_*.json
 
+# Local corpora may contain private or licensed text. Keep the public sample only.
+/src/data/data-test/**/*.txt
+!/src/data/data-test/example_arabic.txt
+
 # Local operating-system files
 .DS_Store
 Thumbs.db

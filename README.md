@@ -35,7 +35,8 @@ Before launching the dashboard:
 
 1. Open **Project → Properties → Java Build Path → Libraries** and confirm that no entry is marked missing.
 2. Run **Project → Clean** and verify that Eclipse reports no compilation errors.
-3. Confirm that `src/data/AR_Stop_Words.json` and `src/data/data-test/` are visible from the repository root.
+3. Confirm that `src/data/AR_Stop_Words.json` and the bundled
+   `src/data/data-test/example_arabic.txt` sample are visible from the repository root.
 4. If SAFAR reports `ClassNotFoundException` or `NoClassDefFoundError`, add the additional JARs distributed with your SAFAR installation to the same build and runtime classpaths.
 
 ## Setup and run
@@ -62,7 +63,8 @@ src/MainPackNLP/MainDashboardUI.java
 
 ## Usage
 
-1. Select one or more Arabic text files.
+1. Select the bundled Arabic sample or add one or more UTF-8 `.txt` files under
+   `src/data/data-test/`, then select them in the source browser.
 2. Generate **Map 1** to calculate word frequencies.
 3. Generate **Map 2** to perform SAFAR-based stemming.
 4. Review totals, unique words, top terms, and charts in the dashboard.
@@ -92,6 +94,13 @@ Generated results are stored under:
 - `Map_Out/Stemming/` for stemming analyses
 
 All text inputs, stop-word data, and generated JSON files are read and written explicitly as UTF-8, so Arabic content remains portable across operating systems. Only regular `.txt` files are treated as corpus input; automatic scans skip other files under `src/data/` (including the stop-word JSON), and unsupported manual selections are reported and ignored.
+
+The repository includes `example_arabic.txt` as a small, non-sensitive smoke-test
+corpus. Other `.txt` files placed anywhere below `src/data/data-test/` are ignored
+by Git by default because real corpora can contain private, copyrighted, or
+otherwise restricted material. Use `git check-ignore -v <path>` before committing
+new data, and add an intentional negation rule to `.gitignore` only for material
+that is safe and licensed for publication.
 
 ### Generated files and Git
 
@@ -134,6 +143,9 @@ My-Arabic-NLP-Server/
 │   │   ├── FileBrowserUI.java
 │   │   └── safar_classes.java
 │   └── data/
+│       ├── AR_Stop_Words.json
+│       └── data-test/
+│           └── example_arabic.txt
 ├── Map_Out/
 │   ├── Frequence/
 │   └── Stemming/
