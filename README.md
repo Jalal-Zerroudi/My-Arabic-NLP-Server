@@ -106,6 +106,8 @@ that is safe and licensed for publication.
 
 The repository's `.gitignore` excludes newly generated Map 1/Map 2 JSON files and Java build output under `bin/`. This keeps routine runs and local compilation from adding timestamped artifacts to future commits. Build the project locally to regenerate `bin/`; compiled classes and copied resources should not be committed.
 
+`.gitignore` is not retroactive: historical output snapshots that are already versioned remain tracked. Do not delete or replace those snapshots merely to clean up a local run. Use `git status --ignored --short` to distinguish tracked files from newly generated, ignored artifacts.
+
 ### Which input does Map 2 use?
 
 The **Generate Map 2** button automatically reads the `.json` file in
@@ -118,6 +120,26 @@ activity log, then generate Map 2 without copying or editing other frequency
 JSON files in between. Copying or editing an older result can change its
 modification time and make it the next Map 2 input. If no frequency JSON exists,
 Map 2 logs a warning and returns without generating a result.
+
+## Reproducible smoke test
+
+Use the bundled `src/data/data-test/example_arabic.txt` file for a quick end-to-end check after configuring the dependencies:
+
+1. Select only `example_arabic.txt` in the source browser and generate **Map 1**.
+2. Confirm success in the activity log, then open the newest JSON file under `Map_Out/Frequence/`.
+3. Verify that the JSON is valid UTF-8, its top-level key identifies the sample file, and its nested values are non-negative integers. Exact counts depend on the current normalization and stop-word rules.
+4. Without copying or editing any frequency output, generate **Map 2**.
+5. Open the newest file under `Map_Out/Stemming/` and verify that it preserves the same source key and contains non-negative integer counts grouped by stem.
+6. Inspect the activity log for file-read, stop-word, or SAFAR errors before treating the result as valid.
+7. From the repository root, run:
+
+   ```bash
+   git status --short
+   ```
+
+   A routine smoke test should not add new Map outputs or `bin/` artifacts to the commit because those paths are ignored.
+
+This project currently has no automated test suite or reproducible command-line build, so this manual smoke test is the available end-to-end verification path.
 
 ## How to interpret the results
 
